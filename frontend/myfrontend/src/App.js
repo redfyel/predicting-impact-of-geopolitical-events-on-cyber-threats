@@ -16,7 +16,7 @@ const App = () => {
 
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState(null);
-  const [showForm, setShowForm] = useState(true); 
+  const [showForm, setShowForm] = useState(true);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -116,7 +116,7 @@ const App = () => {
     console.log("Sending payload:", payload);
     try {
       const response = await axios.post('https://predicting-impact-of-geopolitical-events.onrender.com/predict', payload, {
-        headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" }
+        headers: { 'Content-Type': 'application/json' } // REMOVE Access-Control-Allow-Origin here.
       });
       setPrediction(response.data);
       setError(null);
