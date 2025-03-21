@@ -115,7 +115,7 @@ const App = () => {
     const payload = { features: buildPayload() };
     console.log("Sending payload:", payload);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict', payload, {
+      const response = await axios.post('https://predicting-impact-of-geopolitical-events.onrender.com', payload, {
         headers: { 'Content-Type': 'application/json' }
       });
       setPrediction(response.data);
