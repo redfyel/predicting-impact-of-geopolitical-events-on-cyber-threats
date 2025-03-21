@@ -8,7 +8,7 @@ app = FastAPI()
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://predict-geopolitical-event-impact-on-cyber-threat.vercel.app"],  # React frontend URL
+    allow_origins=["*"],   # React frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -116,7 +116,7 @@ const App = () => {
     console.log("Sending payload:", payload);
     try {
       const response = await axios.post('https://predicting-impact-of-geopolitical-events.onrender.com/predict', payload, {
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" }
       });
       setPrediction(response.data);
       setError(null);
